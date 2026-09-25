@@ -126,9 +126,15 @@ class Fila:
 
 
 def carregar_modelo(caminho):
-    # lê um .yml no estilo do simulador do módulo 3 e monta a lista de Filas
+    # lê um .yml no estilo do simulador do módulo 3 e monta a lista de Filas.
+    # A tag opcional "!PARAMETERS" (exigida pelo simulator.jar do módulo 3
+    # pra reconhecer o arquivo, mas não usada por este script) não é YAML
+    # padrão e o PyYAML não sabe interpretar — ignorada aqui.
     with open(caminho, encoding="utf-8") as arq:
-        dados = yaml.safe_load(arq)
+        texto = "\n".join(
+            linha for linha in arq if linha.strip() != "!PARAMETERS"
+        )
+    dados = yaml.safe_load(texto)
 
     arrivals = dados.get("arrivals") or {}
     network = dados.get("network") or []

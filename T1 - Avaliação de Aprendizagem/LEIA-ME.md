@@ -79,13 +79,44 @@ também está neste diretório), bastando prefixar o arquivo com a linha
 java -jar simulator.jar run /tmp/teste_jar.yml
 ```
 
-Rodamos essa conferência durante o desenvolvimento: com a mesma topologia, os
-resultados do `simulador_rede.py` (PRNG próprio, validado no M4/M6) batem de
-perto com os do `simulator.jar` (PRNG do módulo 3) — probabilidades por
-estado e número de perdas na mesma faixa em todas as filas, o que era
-esperado (gerador diferente, mesma lógica de rede) e serve de sanidade pra
-topologia e pro motor de simulação.
+Testes feitos durante o desenvolvimento:
 
-Como conferência adicional, `simular_rede` com uma única fila sem `network`
-reproduz o resultado do M4; com duas filas em tandem reproduz o do M6 (mesma
-lógica de evento, mesmo gerador).
+- **Regressão exata contra M4 e M6**: descrevendo os mesmos parâmetros do M4
+  (fila única) e do M6 (duas filas em tandem) num `.yml` e rodando com
+  `--seed 1`, `simulador_rede.py` reproduz os resultados desses módulos
+  número por número (mesmo tempo global, mesmos tempos acumulados por
+  estado) — a generalização pra YAML não alterou a lógica de simulação já
+  aprovada nas entregas anteriores.
+- **Estatística contra o `simulator.jar`** (mesma topologia, PRNG diferente,
+  100.000 aleatórios): tanto na rede de validação deste módulo quanto no
+  `model.yml` de exemplo do módulo 3 (4 filas, com realimentação Q2→Q1 e uma
+  fila de capacidade ilimitada), as probabilidades por estado, o número de
+  perdas e o tempo global batem de perto entre as duas ferramentas — no
+  `model.yml`, por exemplo, perdas na Fila 2 ficaram em 1.246 aqui contra uma
+  média de 1.248,8 no `simulator.jar` (5 sementes), e o tempo global divergiu
+  menos de 0,2%.
+- **Números fixos idênticos nos dois simuladores** (`rndnumbers` em vez de
+  gerador): numa fila isolada, os dois batem 100% exato (mesmo tempo global,
+  mesmos tempos por estado) — confirma que a lógica de evento de uma fila
+  única é idêntica à do `simulator.jar`. Com roteamento entre filas os
+  números exatos divergem (a ordem em que cada implementação decide sortear
+  o roteamento vs. o atendimento da fila destino vs. o próximo cliente da
+  fila de origem é uma escolha interna do `simulator.jar`, que é só um
+  `.jar` fechado) — isso não é um bug, é esperado, e por isso a validação de
+  rede usa comparação estatística (muitos aleatórios), não número a número.
+- **Casos de erro**: roteamento pra fila inexistente e soma de
+  probabilidades acima de 1.0 são rejeitados com `ValueError`, como
+  esperado.
+
+`modelo_validacao.yml` roda direto no `simulator.jar` do módulo 3 (que também
+está neste diretório), bastando prefixar o arquivo com a linha
+`!PARAMETERS` exigida por ele:
+
+```bash
+{ echo "!PARAMETERS"; cat modelo_validacao.yml; } > /tmp/teste_jar.yml
+java -jar simulator.jar run /tmp/teste_jar.yml
+```
+
+O `model.yml` de exemplo do módulo 3 já tem essa linha e roda direto tanto no
+`simulator.jar` quanto no `simulador_rede.py` (`python3 simulador_rede.py
+model.yml`) — o loader ignora a tag `!PARAMETERS`, que não é YAML padrão.
