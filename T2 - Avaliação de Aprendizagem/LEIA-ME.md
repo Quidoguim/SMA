@@ -15,9 +15,12 @@ Unidade de tempo: minutos. Cada cliente é um chamado.
 
 | Fila | Papel | Kendall | Chegadas externas | Atendimento |
 |---|---|---|---|---|
-| Q1 | N1 - triagem | G/G/2 (capacidade ilimitada) | entre 4 e 8 | entre 6 e 10 |
+| Q1 | N1 - triagem | G/G/2/∞ | entre 4 e 8 | entre 6 e 10 |
 | Q2 | N2 - especialista | G/G/2/10 | não tem | entre 20 e 40 |
 | Q3 | N3 - desenvolvimento | G/G/1/5 | não tem | entre 30 e 60 |
+
+Kendall `G/G/c/K`: `c` servidores e capacidade `K` (fila + atendimento); `∞` é
+capacidade ilimitada. Chamado que chega a uma fila cheia é perdido.
 
 Roteamento (o que falta pra somar 1 é chamado resolvido, que sai da rede):
 Q1 → Q2 com 0,45; Q2 → Q3 com 0,30; Q2 → Q1 com 0,10 (faltou informação);
@@ -37,6 +40,10 @@ de conhecimento e treinamento). Servidores e capacidades não mudam.
 - `gerar_planilha.py`: gera `indices_desempenho.xlsx`.
 - `indices_desempenho.xlsx`: planilha de cálculo dos índices, com fórmulas.
 - `testes_indices.py`: confere o cálculo dos índices contra o exemplo do M9.
+- `conferencia_jar.py`: confere os resultados contra o `simulator.jar`.
+- `gerar_desenho.py`: gera `rede_atual.svg` e `rede_melhorada.svg`.
+- `rede_atual.svg` e `rede_melhorada.svg`: desenho da rede de filas de cada
+  modelo.
 - `simulator.jar`: simulador do módulo 3, usado pra conferir os resultados.
 
 ## Calculando os índices
@@ -79,6 +86,20 @@ amarelo é o parâmetro alterado na melhoria. Se for gerada de novo, abra no
 Excel ou LibreOffice e salve, pra os valores calculados ficarem gravados no
 arquivo.
 
+## Desenho da rede
+
+```bash
+python3 gerar_desenho.py
+```
+
+Gera `rede_atual.svg` e `rede_melhorada.svg`, lendo os números dos `.yml`: para
+cada fila, a notação de Kendall, o intervalo de atendimento, os servidores e a
+capacidade; as chegadas externas do Q1; e a probabilidade de cada seta. As
+setas que saem pra fora da rede são os chamados resolvidos. No desenho da
+melhoria, as probabilidades que mudaram aparecem em vermelho, com o valor
+anterior entre parênteses. O SVG abre em qualquer navegador e pode ser
+importado no Canva.
+
 ## Conferindo a implementação
 
 ```bash
@@ -96,7 +117,30 @@ arquivos já têm a linha `!PARAMETERS`):
 java -jar simulator.jar run modelo_atual.yml
 ```
 
+Pra comparar os dois simuladores, precisa de Java no PATH:
+
+```bash
+python3 conferencia_jar.py
+```
+
+Roda os dois modelos no `simulator.jar` e no `simulador_rede.py` com as
+sementes 1 a 5 e compara as perdas e os índices de cada fila (30 comparações).
 Os geradores de números aleatórios são diferentes, então os números não são
-idênticos aos do `simulador_rede.py`, mas são compatíveis: perdas no Q2 do
-modelo atual são ~2.060 aqui (semente 1) e ~2.260 no `simulator.jar`, contra
-uma média de ~2.250 em 5 sementes (desvio padrão de ~130).
+idênticos, mas são compatíveis: N, D, U e W diferem em no máximo 2,2% entre os
+dois, e as perdas, que variam bastante entre sementes (no Q3 do modelo atual,
+~125 com desvio padrão de ~34), diferem dentro dessa variação. Todas as
+comparações ficam dentro do critério.
+
+Outras conferências feitas (os números do T2 usam só uma semente por simulação,
+que tem ruído; por isso a planilha traz também a média de 5):
+
+- A taxa de saída realmente contada na simulação bate com a vazão calculada
+  pela fórmula (por exemplo, Q1 do modelo atual: 10,4166 contra 10,4171
+  chamados/h na semente 1).
+- Em 30 sementes do modelo atual, as frações de roteamento realizadas ficam a
+  menos de 1 erro padrão das probabilidades do `.yml`: o sorteio do roteamento
+  não tem viés.
+- As equações de tráfego (chegada total de cada fila resolvida a partir do
+  roteamento) dão a utilização do modelo melhorado: 0,69 / 0,82 / 0,74 no
+  papel e 0,69 / 0,82 / 0,73 na simulação. No modelo atual dão Q2 com 1,26 (acima
+  de 1, por isso satura) e Q3 com 1,13.
