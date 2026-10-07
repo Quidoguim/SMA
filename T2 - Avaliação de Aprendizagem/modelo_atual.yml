@@ -2,7 +2,7 @@
 #  T2 - Help desk de TI: modelo ATUAL (antes das melhorias).
 #  Unidade de tempo: minutos.
 #
-#  Q1 = N1 (triagem)         G/G/2     chegadas externas U(4,8), atend. U(6,10)
+#  Q1 = N1 (triagem)         G/G/2/∞   chegadas externas U(4,8), atend. U(6,10)
 #  Q2 = N2 (especialista)    G/G/2/10  atend. U(20,40)
 #  Q3 = N3 (desenvolvimento) G/G/1/5   atend. U(30,60)
 #

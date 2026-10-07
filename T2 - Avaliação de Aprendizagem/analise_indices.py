@@ -61,8 +61,8 @@ def calcular_indices(probabilidades, servidores, mu):
 
 
 def kendall(servidores, capacidade):
-    # todas as filas são G/G/c/K; K omitido quando a capacidade é ilimitada
-    return f"G/G/{servidores}" + (f"/{capacidade}" if capacidade is not None else "")
+    # todas as filas são G/G/c/K; K = ∞ quando a capacidade é ilimitada
+    return f"G/G/{servidores}/{capacidade if capacidade is not None else '∞'}"
 
 
 def analisar(caminho, seed=1, aleatorios=None):

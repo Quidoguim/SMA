@@ -149,7 +149,7 @@ def aba_fila(wb, modelo, f, tempo_global, resultado, ref):
     primeira = 11
     for i, t in enumerate(resultado["times"]):
         r = primeira + i
-        escreve(ws, f"A{r}", i)
+        escreve(ws, f"A{r}", i).alignment = Alignment(horizontal="center")
         escreve(ws, f"B{r}", t, ENTRADA, "#,##0.0000")
         escreve(ws, f"C{r}", f"=B{r}/$B$7", formato="0.00%")
         escreve(ws, f"D{r}", f"=C{r}*A{r}", formato="0.0000")
@@ -169,7 +169,7 @@ def aba_fila(wb, modelo, f, tempo_global, resultado, ref):
     escreve(ws, f"B{tot + 3}", f"=B{tot + 2}*60", NEGRITO, "0.00")
     escreve(ws, f"A{tot + 5}", "Conferência: soma dos tempos = tempo global?")
     escreve(ws, f"B{tot + 5}", f'=IF(ABS(B{tot}-B7)<0.001,"OK","ERRO")')
-    larguras(ws, [26, 22, 15, 14, 12, 12])
+    larguras(ws, [34, 22, 15, 14, 12, 12])
     nome = ws.title
     return {"perdas": f"'{nome}'!$B$8", "N": f"'{nome}'!$D${tot}",
             "D": f"'{nome}'!$E${tot}", "U": f"'{nome}'!$F${tot}",
@@ -230,8 +230,9 @@ def aba_comparacao(wb, refs, medias, filas_ids):
         for chave, rotulo, fmt in indices:
             escreve(ws, f"A{linha}", f"{fid} ({NOMES.get(fid, fid)})")
             escreve(ws, f"B{linha}", rotulo)
-            escreve(ws, f"C{linha}", f"={refs[('Atual', fid)][chave]}", LIGACAO, fmt)
-            escreve(ws, f"D{linha}", f"={refs[('Melhorado', fid)][chave]}", LIGACAO, fmt)
+            fmt_sem1 = "#,##0" if chave == "perdas" else fmt  # uma simulação: perdas inteiras
+            escreve(ws, f"C{linha}", f"={refs[('Atual', fid)][chave]}", LIGACAO, fmt_sem1)
+            escreve(ws, f"D{linha}", f"={refs[('Melhorado', fid)][chave]}", LIGACAO, fmt_sem1)
             escreve(ws, f"E{linha}", f'=IF(C{linha}=0,"-",D{linha}/C{linha}-1)', formato="+0.0%;-0.0%;0.0%")
             escreve(ws, f"F{linha}", f"={medias[('Atual', fid)][chave]}", LIGACAO, fmt)
             escreve(ws, f"G{linha}", f"={medias[('Melhorado', fid)][chave]}", LIGACAO, fmt)
