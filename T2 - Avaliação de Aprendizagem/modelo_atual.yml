@@ -1,0 +1,51 @@
+#==============================================================================
+#  T2 - Help desk de TI: modelo ATUAL (antes das melhorias).
+#  Unidade de tempo: minutos.
+#
+#  Q1 = N1 (triagem)         G/G/2     chegadas externas U(4,8), atend. U(6,10)
+#  Q2 = N2 (especialista)    G/G/2/10  atend. U(20,40)
+#  Q3 = N3 (desenvolvimento) G/G/1/5   atend. U(30,60)
+#
+#  Roteamento (o que falta pra somar 1.0 é chamado resolvido e sai da rede):
+#    Q1 -> Q2 : 0.45     Q2 -> Q3 : 0.30
+#    Q2 -> Q1 : 0.10     Q3 -> Q2 : 0.20
+#==============================================================================
+!PARAMETERS
+arrivals:
+   Q1: 6.0
+
+queues:
+   Q1:
+      servers: 2
+      minArrival: 4.0
+      maxArrival: 8.0
+      minService: 6.0
+      maxService: 10.0
+   Q2:
+      servers: 2
+      capacity: 10
+      minService: 20.0
+      maxService: 40.0
+   Q3:
+      servers: 1
+      capacity: 5
+      minService: 30.0
+      maxService: 60.0
+
+network:
+-  source: Q1
+   target: Q2
+   probability: 0.45
+-  source: Q2
+   target: Q3
+   probability: 0.30
+-  source: Q2
+   target: Q1
+   probability: 0.10
+-  source: Q3
+   target: Q2
+   probability: 0.20
+
+rndnumbersPerSeed: 100000
+seeds:
+- 1
