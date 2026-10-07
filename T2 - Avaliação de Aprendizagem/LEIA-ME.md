@@ -3,10 +3,11 @@
 Análise por simulação de uma rede de filas própria: o atendimento de chamados
 de um help desk de TI, com três níveis (N1, N2 e N3) e retorno de chamados
 entre eles. Os scripts usam o simulador do T1 (`simulador_rede.py`, mesmo motor
-do M6) e calculam os índices de desempenho do M9. Requisitos: Python 3 e
+do M6) e calculam os índices de desempenho do M9. Requisitos: Python 3 e as
+bibliotecas abaixo (Java só pra rodar o `simulator.jar` e o `conferencia_jar.py`):
 
 ```bash
-pip install pyyaml openpyxl
+pip install pyyaml openpyxl matplotlib
 ```
 
 ## O modelo
@@ -41,9 +42,13 @@ de conhecimento e treinamento). Servidores e capacidades não mudam.
 - `indices_desempenho.xlsx`: planilha de cálculo dos índices, com fórmulas.
 - `testes_indices.py`: confere o cálculo dos índices contra o exemplo do M9.
 - `conferencia_jar.py`: confere os resultados contra o `simulator.jar`.
+- `equacoes_trafego.py`: calcula a carga de cada fila pelas equações de
+  tráfego, sem simulação.
 - `gerar_desenho.py`: gera `rede_atual.svg` e `rede_melhorada.svg`.
 - `rede_atual.svg` e `rede_melhorada.svg`: desenho da rede de filas de cada
   modelo.
+- `gerar_graficos.py`: gera os gráficos da pasta `graficos/`.
+- `graficos/`: probabilidade dos estados de cada fila, em PNG.
 - `simulator.jar`: simulador do módulo 3, usado pra conferir os resultados.
 
 ## Calculando os índices
@@ -100,6 +105,20 @@ melhoria, as probabilidades que mudaram aparecem em vermelho, com o valor
 anterior entre parênteses. O SVG abre em qualquer navegador e pode ser
 importado no Canva.
 
+## Gráficos
+
+```bash
+python3 gerar_graficos.py
+```
+
+Gera, em `graficos/`, dois gráficos de colunas por fila com a probabilidade de
+cada estado (semente 1, as mesmas das abas por fila da planilha):
+`prob_estados_atual_Qn.png`, só do modelo atual, e
+`prob_estados_comparacao_Qn.png`, atual (azul) contra melhorado (laranja). O
+estado é o número de chamados na fila, esperando e em atendimento; nas filas de
+capacidade finita, o último estado é "cheia", em que o chamado que chega é
+perdido. Os valores marcados são o pico de cada modelo e o estado cheio.
+
 ## Conferindo a implementação
 
 ```bash
@@ -131,16 +150,18 @@ dois, e as perdas, que variam bastante entre sementes (no Q3 do modelo atual,
 ~125 com desvio padrão de ~34), diferem dentro dessa variação. Todas as
 comparações ficam dentro do critério.
 
-Outras conferências feitas (os números do T2 usam só uma semente por simulação,
-que tem ruído; por isso a planilha traz também a média de 5):
+Por fim, uma conferência que não depende de simulação:
 
-- A taxa de saída realmente contada na simulação bate com a vazão calculada
-  pela fórmula (por exemplo, Q1 do modelo atual: 10,4166 contra 10,4171
-  chamados/h na semente 1).
-- Em 30 sementes do modelo atual, as frações de roteamento realizadas ficam a
-  menos de 1 erro padrão das probabilidades do `.yml`: o sorteio do roteamento
-  não tem viés.
-- As equações de tráfego (chegada total de cada fila resolvida a partir do
-  roteamento) dão a utilização do modelo melhorado: 0,69 / 0,82 / 0,74 no
-  papel e 0,69 / 0,82 / 0,73 na simulação. No modelo atual dão Q2 com 1,26 (acima
-  de 1, por isso satura) e Q3 com 1,13.
+```bash
+python3 equacoes_trafego.py
+```
+
+Resolve as equações de tráfego (chegada total de cada fila a partir da chegada
+externa e do roteamento) e compara a carga de cada fila com a utilização
+simulada. No modelo melhorado batem: 0,69 / 0,82 / 0,74 no papel e 0,69 / 0,82 /
+0,73 na simulação. No modelo atual o Q2 tem carga 1,26 (acima de 1, por isso
+satura e perde chamados) e o Q3 tem 1,13; a simulação mostra o Q3 em 0,87 porque
+as perdas do Q2 deixam chegar menos chamados a ele.
+
+Os resultados da planilha são de uma semente (a 1, como no M9), que tem ruído; por
+isso a planilha traz também a média de 5 sementes.
