@@ -20,6 +20,7 @@ import argparse
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
+from openpyxl.worksheet.properties import PageSetupProperties
 
 from analise_indices import analisar, kendall
 from simulador_rede import carregar_modelo, simular_rede
@@ -35,6 +36,7 @@ TITULO = Font(name="Arial", size=12, bold=True)
 CABECALHO = PatternFill("solid", fgColor="D9E1F2")
 ALTERADO = PatternFill("solid", fgColor="FFFF00")
 CENTRO = Alignment(horizontal="center", vertical="center", wrap_text=True)
+DIREITA = Alignment(horizontal="right")
 
 
 def escreve(ws, ref, valor, fonte=FORMULA, formato=None, preenchimento=None):
@@ -79,7 +81,8 @@ def aba_parametros(wb, modelos):
             escreve(ws, f"C{linha}", NOMES.get(f.id, f.id))
             escreve(ws, f"D{linha}", kendall(f.num_servidores, f.capacidade))
             escreve(ws, f"E{linha}", f.num_servidores, ENTRADA)
-            escreve(ws, f"F{linha}", f.capacidade if f.capacidade is not None else "∞", ENTRADA)
+            escreve(ws, f"F{linha}", f.capacidade if f.capacidade is not None else "∞",
+                    ENTRADA).alignment = DIREITA
             escreve(ws, f"G{linha}", f.atendimento_min, ENTRADA, "0.0")
             escreve(ws, f"H{linha}", f.atendimento_max, ENTRADA, "0.0")
             escreve(ws, f"I{linha}", f"=(G{linha}+H{linha})/2", formato="0.00")
@@ -123,7 +126,7 @@ def aba_parametros(wb, modelos):
         linha += 1
     linha += 1
     escreve(ws, f"A{linha}", "Amarelo = parâmetro alterado na melhoria.")
-    larguras(ws, [12, 14, 24, 12, 14, 14, 11, 11, 12, 11, 12, 12, 11])
+    larguras(ws, [12, 24, 24, 12, 14, 14, 11, 11, 12, 11, 12, 12, 11])
     return refs
 
 
@@ -136,7 +139,7 @@ def aba_fila(wb, modelo, f, tempo_global, resultado, ref):
     escreve(ws, "A4", "Servidores (C)")
     escreve(ws, "B4", f"={ref['C']}", LIGACAO)
     escreve(ws, "A5", "Capacidade (K)")
-    escreve(ws, "B5", f"={ref['K']}", LIGACAO)
+    escreve(ws, "B5", f"={ref['K']}", LIGACAO).alignment = DIREITA
     escreve(ws, "A6", "MU (clientes/h)")
     escreve(ws, "B6", f"={ref['MU']}", LIGACAO, "0.0000")
     escreve(ws, "A7", "Tempo global (min)")
@@ -167,7 +170,7 @@ def aba_fila(wb, modelo, f, tempo_global, resultado, ref):
     escreve(ws, f"B{tot + 2}", f"=D{tot}/E{tot}", formato="0.0000")
     escreve(ws, f"A{tot + 3}", "W (minutos)", NEGRITO)
     escreve(ws, f"B{tot + 3}", f"=B{tot + 2}*60", NEGRITO, "0.00")
-    escreve(ws, f"A{tot + 5}", "Conferência: soma dos tempos = tempo global?")
+    escreve(ws, f"A{tot + 5}", "Soma dos tempos = tempo global?")
     escreve(ws, f"B{tot + 5}", f'=IF(ABS(B{tot}-B7)<0.001,"OK","ERRO")')
     larguras(ws, [34, 22, 15, 14, 12, 12])
     nome = ws.title
@@ -233,10 +236,12 @@ def aba_comparacao(wb, refs, medias, filas_ids):
             fmt_sem1 = "#,##0" if chave == "perdas" else fmt  # uma simulação: perdas inteiras
             escreve(ws, f"C{linha}", f"={refs[('Atual', fid)][chave]}", LIGACAO, fmt_sem1)
             escreve(ws, f"D{linha}", f"={refs[('Melhorado', fid)][chave]}", LIGACAO, fmt_sem1)
-            escreve(ws, f"E{linha}", f'=IF(C{linha}=0,"-",D{linha}/C{linha}-1)', formato="+0.0%;-0.0%;0.0%")
+            escreve(ws, f"E{linha}", f'=IF(C{linha}=0,"-",D{linha}/C{linha}-1)',
+                    formato="+0.0%;-0.0%;0.0%").alignment = DIREITA
             escreve(ws, f"F{linha}", f"={medias[('Atual', fid)][chave]}", LIGACAO, fmt)
             escreve(ws, f"G{linha}", f"={medias[('Melhorado', fid)][chave]}", LIGACAO, fmt)
-            escreve(ws, f"H{linha}", f'=IF(F{linha}=0,"-",G{linha}/F{linha}-1)', formato="+0.0%;-0.0%;0.0%")
+            escreve(ws, f"H{linha}", f'=IF(F{linha}=0,"-",G{linha}/F{linha}-1)',
+                    formato="+0.0%;-0.0%;0.0%").alignment = DIREITA
             linha += 1
         linha += 1
     escreve(ws, f"A{linha}", "A vazão (D) do N2 e do N3 cai porque, com menos chamados escalando, "
@@ -277,6 +282,11 @@ def main():
 
     aba_comparacao(wb, refs, medias, [f.id for f in modelos["Atual"]])
     # ordem das abas: Comparação, Parâmetros, filas do atual, filas do melhorado, Sementes
+    for ws in wb.worksheets:  # impressão: paisagem, cabendo na largura da página
+        ws.page_setup.orientation = "landscape"
+        ws.page_setup.fitToWidth = 1
+        ws.page_setup.fitToHeight = 0
+        ws.sheet_properties.pageSetUpPr = PageSetupProperties(fitToPage=True)
     wb.save(args.saida)
     print(f"Planilha gerada: {args.saida}")
 
