@@ -89,12 +89,12 @@ Testes feitos durante o desenvolvimento:
   aprovada nas entregas anteriores.
 - **Estatística contra o `simulator.jar`** (mesma topologia, PRNG diferente,
   100.000 aleatórios): tanto na rede de validação deste módulo quanto no
-  `model.yml` de exemplo do módulo 3 (4 filas, com realimentação Q2→Q1 e uma
-  fila de capacidade ilimitada), as probabilidades por estado, o número de
-  perdas e o tempo global batem de perto entre as duas ferramentas — no
-  `model.yml`, por exemplo, perdas na Fila 2 ficaram em 1.246 aqui contra uma
-  média de 1.248,8 no `simulator.jar` (5 sementes), e o tempo global divergiu
-  menos de 0,2%.
+  `modelo_exemplo_m3.yml` (o `model.yml` de exemplo do módulo 3: 4 filas, com
+  realimentação Q2→Q1 e uma fila de capacidade ilimitada), as probabilidades
+  por estado, o número de perdas e o tempo global batem de perto entre as duas
+  ferramentas — no `modelo_exemplo_m3.yml`, por exemplo, perdas na Fila 2
+  ficaram em 1.246 aqui contra uma média de 1.248,8 no `simulator.jar` (5
+  sementes), e o tempo global divergiu menos de 0,2%.
 - **Números fixos idênticos nos dois simuladores** (`rndnumbers` em vez de
   gerador): numa fila isolada, os dois batem 100% exato (mesmo tempo global,
   mesmos tempos por estado) — confirma que a lógica de evento de uma fila
@@ -117,6 +117,7 @@ está neste diretório), bastando prefixar o arquivo com a linha
 java -jar simulator.jar run /tmp/teste_jar.yml
 ```
 
-O `model.yml` de exemplo do módulo 3 já tem essa linha e roda direto tanto no
-`simulator.jar` quanto no `simulador_rede.py` (`python3 simulador_rede.py
-model.yml`) — o loader ignora a tag `!PARAMETERS`, que não é YAML padrão.
+O `modelo_exemplo_m3.yml` (exemplo do módulo 3) já tem essa linha e roda direto
+tanto no `simulator.jar` quanto no `simulador_rede.py` (`python3
+simulador_rede.py modelo_exemplo_m3.yml`) — o loader ignora a tag `!PARAMETERS`,
+que não é YAML padrão.

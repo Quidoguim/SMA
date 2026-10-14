@@ -3,8 +3,8 @@
 # suportava roteamento probabilístico entre filas, mas com a topologia fixa
 # no próprio código Python) para aceitar qualquer rede descrita em YAML, no
 # mesmo estilo de arquivo usado no simulador do módulo 3 (arrivals/queues/
-# network), o que permite inclusive usar o `model.yml` de exemplo do módulo 3
-# como entrada de teste.
+# network), o que permite inclusive usar o exemplo do módulo 3
+# (`modelo_exemplo_m3.yml`, o `model.yml` do módulo) como entrada de teste.
 #
 # ---------------------------------------------------------------------------
 # COMO USAR
