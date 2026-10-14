@@ -33,6 +33,8 @@ de conhecimento e treinamento). Servidores e capacidades não mudam.
 
 ## Arquivos
 
+- `T2 - Apresentação.pdf`: apresentação do trabalho (11 slides).
+- `T2 - Vídeo da Apresentação.txt`: link do vídeo da apresentação no YouTube.
 - `modelo_atual.yml` e `modelo_melhorado.yml`: as duas redes, no formato do
   simulador do módulo 3.
 - `simulador_rede.py`: simulador por eventos discretos (cópia do T1).
