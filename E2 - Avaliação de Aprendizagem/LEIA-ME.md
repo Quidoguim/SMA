@@ -9,6 +9,9 @@ imagens na pasta `imagens/`.
 | M10 | [M10-texto.md](<M10 - Processo de Nascimento e Morte/M10-texto.md>) | processo de nascimento e morte, intensidade de tráfego, M/M/1/∞ e M/M/C/K (método dos pesos) |
 | M11 | [M11-texto.md](<M11 - Cálculo dos Índices de Desempenho/M11-texto.md>) | perda de clientes, população, vazão, utilização e tempo de resposta |
 
+O enunciado das duas questões e o andamento da resolução ficam em
+[E2-andamento.md](E2-andamento.md).
+
 ## Resumo das fórmulas
 
 Taxa é o inverso do tempo: atender um cliente em 20 min dá μ = 3 por hora.
