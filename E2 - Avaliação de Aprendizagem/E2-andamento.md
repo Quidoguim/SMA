@@ -20,7 +20,7 @@ Regras de precisão (critério da nota máxima):
 
 ---
 
-## Questão 1 — cafeteria Bauducco, M/M/1/∞
+## Questão 1 — cafeteria Bauducco, M/M/1/∞ (concluída)
 
 > 1 funcionário, clientes não são perdidos, chegam em média **15 clientes/h** e são
 > atendidos em média **24 clientes/h**, chegadas e atendimentos exponenciais.
@@ -59,22 +59,55 @@ estados 0, 1, 2, …, 10, 11, … com λ = 15 nas setas para a direita e μ = 24
 | π₃ | 0,146484 · 0,625 | 0,091553 = 9,16% |
 | π₄ | 0,091553 · 0,625 | 0,057220 = 5,72% |
 | π₅ | 0,057220 · 0,625 | 0,035763 = 3,58% |
+| π₆ | 0,035763 · 0,625 | 0,022352 = 2,24% |
+| π₇ | 0,022352 · 0,625 | 0,013970 = 1,40% |
+| π₈ | 0,013970 · 0,625 | 0,008731 = 0,87% |
+| π₉ | 0,008731 · 0,625 | 0,005457 = 0,55% |
+| π₁₀ | 0,005457 · 0,625 | 0,003411 = 0,34% |
 
-(π₂, π₃ e π₅ tinham sido cortados em 14,64%, 9,15% e 3,57%; os valores acima já estão
-arredondados.)
+(Vários valores tinham sido cortados em vez de arredondados — 14,64%, 9,15%, 3,57%,
+2,23%, 1,39%, 0,54%, 0,33%; os valores acima já estão arredondados.)
 
-### Próximos passos — Pergunta 1
+**Passos 5 a 7 — soma, complemento e conferência (Pergunta 1 concluída)**
 
-1. **π₆ até π₁₀**: continuar a escadinha (× 0,625), em decimal com 6 casas.
-2. **Soma acumulada**: P(N ≤ 10) = π₀ + π₁ + … + π₁₀.
-3. **Complemento**: P(N > 10) = 1 − P(N ≤ 10). Dar a resposta em decimal e em %.
-4. **Conferência**: pela forma fechada πᵢ = π₀ · ρⁱ, a resposta tem que bater com ρ¹¹
-   (0,625 elevado a 11).
+> P(N ≤ 10) = π₀ + π₁ + … + π₁₀ = 0,994316 = 99,43%
+> P(N > 10) = 1 − P(N ≤ 10) = 1 − 0,994316 = **0,005684 = 0,5684%**
+> Conferência pela forma fechada πᵢ = π₀ · ρⁱ: P(N > 10) = ρ¹¹ = 0,625¹¹ = 0,005684 ✓
+
+Interpretação: um cliente que chega tem cerca de 0,57% de chance (≈ 1 em 176) de
+encontrar mais de 10 clientes na fila — raro, porque o funcionário dá conta (ρ = 0,625).
 
 Obs.: o "intervalo de 1 hora" do enunciado só define a unidade das taxas; a
 probabilidade pedida é a estacionária, não precisa multiplicar por tempo.
 
-### Próximos passos — Pergunta 2
+### Pergunta 2 — concluída
+
+Tabela de teste (λ = 15 fixo; μ = 60 ÷ tempo; ρ = 15 ÷ μ):
+
+| Tempo por cliente | μ (clientes/h) | ρ | Estável (ρ < 1)? |
+|---|---|---|---|
+| 2,5 min | 24 | 0,625 | sim |
+| 3 min | 20 | 0,75 | sim |
+| 3,5 min | 17,142857 | 0,875 | sim |
+| 4 min | 15 | 1 | não (ρ = 1 também é instável) |
+| 5 min | 12 | 1,25 | não |
+
+Demonstração:
+
+> Hipótese da estacionariedade: ρ = λ/μ < 1
+> λ = 15 clientes/h ⇒ 15/μ < 1 ⇒ μ > 15 clientes/h
+> Tempo de serviço = 1/μ ⇒ 1/μ < 1/15 h = 60/15 min = 4 min
+> Para ρ = 1 (μ = 15, tempo = 4 min) o sistema é instável, então o limite não é incluído.
+> **Resposta:** o tempo de serviço precisa ser **menor que 4 minutos** por cliente.
+
+Dissertação (texto próprio, revisado):
+
+> Sempre que ρ < 1, o atendente atende mais rápido do que os clientes chegam, e a fila
+> se mantém estável. Se o funcionário levar 4 minutos ou mais por cliente, ρ ≥ 1 e a
+> fila vai aumentar mais do que ele dá conta. Hoje ele leva 2,5 min por cliente, então
+> tem 1,5 min de folga até o seu limite.
+
+### Roteiro usado na Pergunta 2
 
 Roteiro do raciocínio (dissertativo, o racional vale nota):
 
