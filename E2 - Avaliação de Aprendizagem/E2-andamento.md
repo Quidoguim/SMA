@@ -134,7 +134,7 @@ Mesmo roteiro aplicado em outro caso, para comparar o formato:
 
 ---
 
-## Questão 2 — cafeteria Bauducco, M/M/3/4 (não começada)
+## Questão 2 — cafeteria Bauducco, M/M/3/4 (concluída)
 
 > 3 funcionários, capacidade 4 clientes (quem chega com a fila cheia é perdido),
 > chegam em média **15 clientes/h** e são atendidos em média **10 clientes/h**,
@@ -147,3 +147,83 @@ Mesmo roteiro aplicado em outro caso, para comparar o formato:
 Material de base: método dos pesos do M10 (Wᵢ = Wᵢ₋₁ · λ / (min(i, C) · μ),
 normalização πᵢ = Wᵢ / ΣW) e índices do M11 (perda = λ · π_K, N, D, W = N/D). O
 exemplo M/M/3/3 do servidor com 3 threads no `M11-texto.md` é o mais parecido.
+
+### Feito até agora (conferido)
+
+**Passo 1 — modelo, estados e taxas**
+
+> M/M/3/4: chegada e atendimento exponenciais, C = 3 funcionários, capacidade K = 4
+> (quem chega com 4 clientes no sistema é perdido). λ = 15 clientes/h, μ = 10 clientes/h
+> por funcionário. Estados 0 a 4.
+
+Diagrama: estados 0, 1, 2, 3, 4; λ = 15 em todas as setas para a direita; para a
+esquerda, a taxa de saída do estado i é min(i, C) · μ (número de funcionários ocupados
+× taxa de cada um — multiplica por μ uma vez só):
+
+| Estado i | min(i, 3) | Taxa de saída μᵢ = min(i, 3) · 10 |
+|---|---|---|
+| 1 | 1 | 10 |
+| 2 | 2 | 20 |
+| 3 | 3 | 30 |
+| 4 | 3 | 30 |
+
+**Passo 2 — pesos**
+
+| Peso | Cálculo | Valor |
+|---|---|---|
+| W₀ | — | 1 |
+| W₁ | 1 · 15/10 | 1,5 |
+| W₂ | 1,5 · 15/20 | 1,125 |
+| W₃ | 1,125 · 15/30 | 0,5625 |
+| W₄ | 0,5625 · 15/30 | 0,28125 |
+
+> ΣW = 1 + 1,5 + 1,125 + 0,5625 + 0,28125 = 4,46875
+
+(W₄ e ΣW tinham sido cortados em 0,2812 e 4,4687; os valores acima são exatos.)
+
+**Passo 3 — probabilidades (normalização)**
+
+| Estado | Cálculo | πᵢ |
+|---|---|---|
+| π₀ | 1 / 4,46875 | 0,223776 |
+| π₁ | 1,5 / 4,46875 | 0,335664 |
+| π₂ | 1,125 / 4,46875 | 0,251748 |
+| π₃ | 0,5625 / 4,46875 | 0,125874 |
+| π₄ | 0,28125 / 4,46875 | 0,062937 |
+
+> Soma = 0,999999 ≈ 1 (a diferença de 0,000001 é só o arredondamento da 6ª casa)
+
+**Passo 4 — perda por hora (Pergunta 1 concluída)**
+
+> Cliente é perdido quando chega com a fila cheia (estado 4 = K).
+> Perda = λ · π₄ = 15 · 0,062937 = **0,944055 clientes/h** (≈ 0,9441)
+
+Interpretação: perde-se, em média, quase 1 cliente por hora — 6,29% de quem chega.
+
+**Passo 5 — população média**
+
+> N = Σ πⱼ · j = (0,223776 · 0) + (0,335664 · 1) + (0,251748 · 2) + (0,125874 · 3) + (0,062937 · 4)
+> N = 0 + 0,335664 + 0,503496 + 0,377622 + 0,251748 = **1,468530 clientes**
+
+**Passo 6 — vazão**
+
+> D = Σ πⱼ · μⱼ = (0,223776 · 0) + (0,335664 · 10) + (0,251748 · 20) + (0,125874 · 30) + (0,062937 · 30)
+> D = 0 + 3,356640 + 5,034960 + 3,776220 + 1,888110 = **14,055930 clientes/h**
+> Conferência: λ − perda = 15 − 0,944055 = 14,055945 ≈ D ✓ (diferença só de arredondamento)
+
+**Passo 7 — tempo de resposta (Pergunta 2 concluída)**
+
+> W = N / D = 1,468530 / 14,055930 = 0,104478 h
+> W = 0,104478 · 60 = **6,268657 minutos** (≈ 6 min 16 s)
+
+Interpretação: cada cliente fica, em média, 6,27 min na cafeteria. Só o atendimento
+leva 1/μ = 60/10 = 6 min, então a espera média na fila é de uns 0,27 min (≈ 16 s).
+
+## Checklist da entrega
+
+- [ ] Questão 1 passada a limpo à mão (modelo, diagrama, ρ, tabela π₀–π₁₀, soma,
+      complemento, conferência ρ¹¹; Pergunta 2 com tabela, demonstração e texto).
+- [ ] Questão 2 passada a limpo à mão (modelo, diagrama com taxas, pesos, ΣW,
+      probabilidades e validação, perda, N, D com conferência, W em horas e minutos).
+- [ ] Um PDF por questão, enviado na sala certa (Questão 1 / Questão 2, código 691),
+      até 21/10/2026 23:59.
