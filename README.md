@@ -11,6 +11,7 @@ Cada entrega tem sua própria pasta, nomeada com o código do módulo (M) ou da 
 - [T1 - Simulador para Rede de Filas](<T1 - Simulador para Rede de Filas>): generalização do simulador do M6 para carregar qualquer topologia de rede de filas a partir de um arquivo `.yml`, no mesmo estilo do simulador do módulo 3.
 - [T2 - Análise por Simulação de um Help Desk de TI](<T2 - Análise por Simulação de um Help Desk de TI>): análise por simulação de uma rede de filas própria (help desk de TI, com retorno de chamados entre três níveis de atendimento), identificando o gargalo, propondo uma melhoria e comparando os índices de desempenho (população, vazão, utilização e tempo de resposta) antes e depois. Inclui a apresentação em PDF e o link do vídeo.
 - [E2 - Avaliação de Aprendizagem](<E2 - Avaliação de Aprendizagem>): material de apoio dos módulos M10 (processo de nascimento e morte, M/M/1/∞ e M/M/C/K) e M11 (cálculo dos índices de desempenho), com textos, fórmulas transcritas e imagens, para resolver as questões da E2.
+- [E3 - Avaliação de Aprendizagem](<E3 - Avaliação de Aprendizagem>): material de apoio do módulo M12 (Cadeias de Markov em tempo contínuo: matriz de transição, gerador infinitesimal, montagem e resolução do sistema πQ = 0 e normalização), com texto, fórmulas transcritas e imagens, e a resolução da questão da E3 (cadeia de Markov da biruta de sinalização) entregue em PDF.
 
 ## Integrantes
 
