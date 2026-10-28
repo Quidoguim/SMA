@@ -10,7 +10,8 @@ imagens na pasta `imagens/`.
 | M11 | [M11-texto.md](<M11 - Cálculo dos Índices de Desempenho/M11-texto.md>) | perda de clientes, população, vazão, utilização e tempo de resposta |
 
 O enunciado das duas questões e o andamento da resolução ficam em
-[E2-andamento.md](E2-andamento.md).
+[E2-andamento.md](E2-andamento.md). As resoluções escritas à mão, entregues no
+Moodle, estão em [E2 - Q1.pdf](<E2 - Q1.pdf>) e [E2 - Q2.pdf](<E2 - Q2.pdf>).
 
 ## Resumo das fórmulas
 
