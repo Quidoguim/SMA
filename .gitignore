@@ -4,4 +4,13 @@ __pycache__/
 Thumbs.db
 ~$*
 .~lock.*#
-graphify-out/
+# graphify: só o que é portátil entre computadores vai pro Git
+graphify-out/*
+!graphify-out/graph.json
+!graphify-out/GRAPH_REPORT.md
+!graphify-out/manifest.json
+!graphify-out/.graphify_labels.json
+!graphify-out/converted/
+!graphify-out/cache/
+graphify-out/cache/hook_sessions/
+graphify-out/cache/stat-index.json

@@ -1,0 +1,728 @@
+{
+  "M4 - Desenvolvimento de Simulador para uma Fila/simulador_fila.py": {
+    "mtime": 1788348984.254205,
+    "seen": 1793111542.1409814,
+    "ast_hash": "ed3fd153814b23b5ce4b4b751fe96b99",
+    "semantic_hash": "ed3fd153814b23b5ce4b4b751fe96b99"
+  },
+  "M6 - Desenvolvimento de Simulador para Filas em Tandem/simulador_rede_filas.py": {
+    "mtime": 1789567412.1445866,
+    "seen": 1793111542.1409876,
+    "ast_hash": "5c5ef903616918d2e429c26a6632c27f",
+    "semantic_hash": "5c5ef903616918d2e429c26a6632c27f"
+  },
+  "T1 - Simulador para Rede de Filas/simulador_rede.py": {
+    "mtime": 1791977264.7138486,
+    "seen": 1793111542.1409903,
+    "ast_hash": "fa91ccd17712aedcb5058a83eb4d5ffc",
+    "semantic_hash": "fa91ccd17712aedcb5058a83eb4d5ffc"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/analise_indices.py": {
+    "mtime": 1791388282.3923903,
+    "seen": 1793111542.1409924,
+    "ast_hash": "12de281839233262cc51314836688271",
+    "semantic_hash": "12de281839233262cc51314836688271"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/conferencia_jar.py": {
+    "mtime": 1791388502.5772872,
+    "seen": 1793111542.140994,
+    "ast_hash": "f1bad3a5046185e091146bfaf1e4d613",
+    "semantic_hash": "f1bad3a5046185e091146bfaf1e4d613"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/equacoes_trafego.py": {
+    "mtime": 1791395271.9179494,
+    "seen": 1793111542.1409953,
+    "ast_hash": "2147309125ec3657da3bacf026a8dcb7",
+    "semantic_hash": "2147309125ec3657da3bacf026a8dcb7"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/gerar_desenho.py": {
+    "mtime": 1791388393.1360195,
+    "seen": 1793111542.140997,
+    "ast_hash": "5ae98719e78fb463910fae70f70ce939",
+    "semantic_hash": "5ae98719e78fb463910fae70f70ce939"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/gerar_graficos.py": {
+    "mtime": 1791394236.2622392,
+    "seen": 1793111542.140998,
+    "ast_hash": "92774f36ec0bd78d3b1147771c32ec81",
+    "semantic_hash": "92774f36ec0bd78d3b1147771c32ec81"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/gerar_planilha.py": {
+    "mtime": 1791395186.57154,
+    "seen": 1793111542.1409998,
+    "ast_hash": "689e9e59d64269deb7c5aeb977d9646e",
+    "semantic_hash": "689e9e59d64269deb7c5aeb977d9646e"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/simulador_rede.py": {
+    "mtime": 1791977264.7148535,
+    "seen": 1793111542.141001,
+    "ast_hash": "fa91ccd17712aedcb5058a83eb4d5ffc",
+    "semantic_hash": "fa91ccd17712aedcb5058a83eb4d5ffc"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/testes_indices.py": {
+    "mtime": 1791384211.0399978,
+    "seen": 1793111542.1410022,
+    "ast_hash": "739c4d9f6477cae2bc2ce60ef0a94f69",
+    "semantic_hash": "739c4d9f6477cae2bc2ce60ef0a94f69"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/E2-andamento.md": {
+    "mtime": 1792589319.7792025,
+    "seen": 1793111542.1410038,
+    "ast_hash": "39b71f9ea274ccbfc7d9f450a43d2938",
+    "semantic_hash": "39b71f9ea274ccbfc7d9f450a43d2938"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/LEIA-ME.md": {
+    "mtime": 1793194256.8292851,
+    "seen": 1793703711.7014997,
+    "ast_hash": "6b63cee67252cb62c716d67f332f9749",
+    "semantic_hash": "6b63cee67252cb62c716d67f332f9749"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/M10-texto.md": {
+    "mtime": 1792521924.5055318,
+    "seen": 1793111542.141006,
+    "ast_hash": "2dc6406279a209ff213a08b79448c127",
+    "semantic_hash": "2dc6406279a209ff213a08b79448c127"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/M11-texto.md": {
+    "mtime": 1792521923.6571844,
+    "seen": 1793111542.1410074,
+    "ast_hash": "3de486879cebc69b685d2b2fc68a90d4",
+    "semantic_hash": "3de486879cebc69b685d2b2fc68a90d4"
+  },
+  "M6 - Desenvolvimento de Simulador para Filas em Tandem/LEIA-ME.md": {
+    "mtime": 1789567412.1405096,
+    "seen": 1793111542.1410084,
+    "ast_hash": "d50dec8c0624a11511d1e1e41967f34a",
+    "semantic_hash": "d50dec8c0624a11511d1e1e41967f34a"
+  },
+  "README.md": {
+    "mtime": 1794333022.3621025,
+    "seen": 1794396717.4220383,
+    "ast_hash": "fda05e774f4a05e9877f708eb0068f92",
+    "semantic_hash": "fda05e774f4a05e9877f708eb0068f92"
+  },
+  "T1 - Simulador para Rede de Filas/LEIA-ME.md": {
+    "mtime": 1791977289.358466,
+    "seen": 1793111542.1410103,
+    "ast_hash": "ae87338858d954d06cd97a36b48c5abc",
+    "semantic_hash": "ae87338858d954d06cd97a36b48c5abc"
+  },
+  "T1 - Simulador para Rede de Filas/modelo_exemplo_m3.yml": {
+    "mtime": 1790359295.5536902,
+    "seen": 1793111542.1410112,
+    "ast_hash": "df64b463c4578806cc454697c091da1f",
+    "semantic_hash": "df64b463c4578806cc454697c091da1f"
+  },
+  "T1 - Simulador para Rede de Filas/modelo_validacao.yml": {
+    "mtime": 1790360126.0286055,
+    "seen": 1793111542.1410122,
+    "ast_hash": "d296490d1035163f69dbf4e2a9a2aa52",
+    "semantic_hash": "d296490d1035163f69dbf4e2a9a2aa52"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/LEIA-ME.md": {
+    "mtime": 1791977264.7148535,
+    "seen": 1793111542.1410131,
+    "ast_hash": "977d92ee936863fd964a1ba1cce6580c",
+    "semantic_hash": "977d92ee936863fd964a1ba1cce6580c"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/T2 - V\u00eddeo da Apresenta\u00e7\u00e3o.txt": {
+    "mtime": 1791976216.9500377,
+    "seen": 1793111542.1410146,
+    "ast_hash": "a01f48bb4b657d070b8d0640e4cd7fee",
+    "semantic_hash": "a01f48bb4b657d070b8d0640e4cd7fee"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/modelo_atual.yml": {
+    "mtime": 1791388524.790813,
+    "seen": 1793111542.141016,
+    "ast_hash": "b6970fc141a884b90dec2f07397f4e87",
+    "semantic_hash": "b6970fc141a884b90dec2f07397f4e87"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/modelo_melhorado.yml": {
+    "mtime": 1791388524.7965803,
+    "seen": 1793111542.1410172,
+    "ast_hash": "e6e644dbca5c2f9e648cd8d1679163f2",
+    "semantic_hash": "e6e644dbca5c2f9e648cd8d1679163f2"
+  },
+  "graphify-out/converted/M4 - Desenvolvimento de Simulador para uma Fila - Preenchido_5fef0bbf.md": {
+    "mtime": 1793111076.5895562,
+    "seen": 1793111542.1410184,
+    "ast_hash": "13500c5948cb67139e98aab1017cee8a",
+    "semantic_hash": "13500c5948cb67139e98aab1017cee8a"
+  },
+  "graphify-out/converted/M4 - Desenvolvimento de Simulador para uma Fila_9e60a648.md": {
+    "mtime": 1793111076.6063745,
+    "seen": 1793111542.1410193,
+    "ast_hash": "08409d6bd124026e568dc6550a506811",
+    "semantic_hash": "08409d6bd124026e568dc6550a506811"
+  },
+  "graphify-out/converted/M6 - Desenvolvimento de Simulador para Filas em Tandem_6469c9e5.md": {
+    "mtime": 1793111076.7579238,
+    "seen": 1793111542.1410203,
+    "ast_hash": "e3f42e21689b213ae2ab1077149e0588",
+    "semantic_hash": "e3f42e21689b213ae2ab1077149e0588"
+  },
+  "graphify-out/converted/T1 - Relat\u00f3rio Final_d1cadb55.md": {
+    "mtime": 1793111076.9176085,
+    "seen": 1793111542.1410215,
+    "ast_hash": "d0a70309c6cf5634faac7a18ffd61d78",
+    "semantic_hash": "d0a70309c6cf5634faac7a18ffd61d78"
+  },
+  "graphify-out/converted/indices_desempenho_56417cf8.md": {
+    "mtime": 1793111080.1463368,
+    "seen": 1793111542.1410224,
+    "ast_hash": "0f7c57a53c1a30ed13ed0d555f965957",
+    "semantic_hash": "0f7c57a53c1a30ed13ed0d555f965957"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/E2 - Q1.pdf": {
+    "mtime": 1792590713.1961567,
+    "seen": 1793111542.1410236,
+    "ast_hash": "ef0781e8b394d706bc9b7e4fc426b734",
+    "semantic_hash": "ef0781e8b394d706bc9b7e4fc426b734"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/E2 - Q2.pdf": {
+    "mtime": 1792590716.6203153,
+    "seen": 1793111542.141025,
+    "ast_hash": "34c24ac0912e55a76de19fe4bc16f674",
+    "semantic_hash": "34c24ac0912e55a76de19fe4bc16f674"
+  },
+  "M4 - Desenvolvimento de Simulador para uma Fila/M4 - Desenvolvimento de Simulador para uma Fila.pdf": {
+    "mtime": 1788350459.1064901,
+    "seen": 1793111542.141026,
+    "ast_hash": "00722923983ad3d123312e20793a8af8",
+    "semantic_hash": "00722923983ad3d123312e20793a8af8"
+  },
+  "M6 - Desenvolvimento de Simulador para Filas em Tandem/M6 - Desenvolvimento de Simulador para Filas em Tandem.pdf": {
+    "mtime": 1790358293.666919,
+    "seen": 1793111542.1410267,
+    "ast_hash": "803d7beacbba2097eb7169d88e1a6d2a",
+    "semantic_hash": "803d7beacbba2097eb7169d88e1a6d2a"
+  },
+  "T1 - Simulador para Rede de Filas/T1 - Relat\u00f3rio Final.pdf": {
+    "mtime": 1791382130.4931674,
+    "seen": 1793111542.1410282,
+    "ast_hash": "f27940a6b2a63c3eb2d486010f88bfc4",
+    "semantic_hash": "f27940a6b2a63c3eb2d486010f88bfc4"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/T2 - Apresenta\u00e7\u00e3o.pdf": {
+    "mtime": 1791976098.2592704,
+    "seen": 1793111542.1410291,
+    "ast_hash": "d8658bb96247e304e11d96a8d06d600b",
+    "semantic_hash": "d8658bb96247e304e11d96a8d06d600b"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/01-modelo-markoviano.png": {
+    "mtime": 1792521596.9329536,
+    "seen": 1793111542.1410306,
+    "ast_hash": "7a710b55edf78d348f850e49be2a21af",
+    "semantic_hash": "7a710b55edf78d348f850e49be2a21af"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/02-processo-nascimento-morte.png": {
+    "mtime": 1792521596.9712932,
+    "seen": 1793111542.141032,
+    "ast_hash": "3f2d3f6e80e24ae85dbf3fb7d35c6601",
+    "semantic_hash": "3f2d3f6e80e24ae85dbf3fb7d35c6601"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/03-exemplo-caixa-supermercado.png": {
+    "mtime": 1792521596.9992263,
+    "seen": 1793111542.1410332,
+    "ast_hash": "ec79086e9e88199cf5ed660e7d5f45bc",
+    "semantic_hash": "ec79086e9e88199cf5ed660e7d5f45bc"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/04-intensidade-trafego.png": {
+    "mtime": 1792521597.0247135,
+    "seen": 1793111542.1410346,
+    "ast_hash": "8d99143854fbecc00ec7eb9cada4e861",
+    "semantic_hash": "8d99143854fbecc00ec7eb9cada4e861"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/05-notacao-kendall.png": {
+    "mtime": 1792521597.0470717,
+    "seen": 1793111542.1410356,
+    "ast_hash": "d610519c605b5e37e8d5c8281326d51d",
+    "semantic_hash": "d610519c605b5e37e8d5c8281326d51d"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/06-mm1-infinito-diagrama.png": {
+    "mtime": 1792521597.0742526,
+    "seen": 1793111542.1410367,
+    "ast_hash": "e133e0bd59abc602af9afcdbf3204afb",
+    "semantic_hash": "e133e0bd59abc602af9afcdbf3204afb"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/07-interativo-mm1-1.png": {
+    "mtime": 1792521597.1166735,
+    "seen": 1793111542.1410382,
+    "ast_hash": "b86e1c283eb8df811f322b74d5c9bddc",
+    "semantic_hash": "b86e1c283eb8df811f322b74d5c9bddc"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/07-interativo-mm1-2.png": {
+    "mtime": 1792521597.1686842,
+    "seen": 1793111542.1410396,
+    "ast_hash": "05e8326291992e8ebbf21bcf7adb4987",
+    "semantic_hash": "05e8326291992e8ebbf21bcf7adb4987"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/07-interativo-mm1-3.png": {
+    "mtime": 1792521597.2031522,
+    "seen": 1793111542.1410415,
+    "ast_hash": "f6b6174d8eb2f3f0d44670b531f92695",
+    "semantic_hash": "f6b6174d8eb2f3f0d44670b531f92695"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/07-interativo-mm1-4.png": {
+    "mtime": 1792521597.248047,
+    "seen": 1793111542.1410425,
+    "ast_hash": "05294927c3a8b5fac61b15a4d50cbc9e",
+    "semantic_hash": "05294927c3a8b5fac61b15a4d50cbc9e"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/08-formula-p0-mm1.png": {
+    "mtime": 1792521597.2688992,
+    "seen": 1793111542.1410437,
+    "ast_hash": "b17a4d11d6755d44b96396216b8b3299",
+    "semantic_hash": "b17a4d11d6755d44b96396216b8b3299"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/09-formula-pi-mm1.png": {
+    "mtime": 1792521597.2688992,
+    "seen": 1793111542.141045,
+    "ast_hash": "d5934b30ab427b8e9872b47b1c1ae3df",
+    "semantic_hash": "d5934b30ab427b8e9872b47b1c1ae3df"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/10-exemplo-mm1.png": {
+    "mtime": 1792521597.3044767,
+    "seen": 1793111542.1410463,
+    "ast_hash": "d667ea6a96aac67f04215bff877094e8",
+    "semantic_hash": "d667ea6a96aac67f04215bff877094e8"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/11-mm14-diagrama.png": {
+    "mtime": 1792521597.324352,
+    "seen": 1793111542.1410475,
+    "ast_hash": "8b92bb53d62eee7f83b0e12926212076",
+    "semantic_hash": "8b92bb53d62eee7f83b0e12926212076"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/12-solucao-mmck.png": {
+    "mtime": 1792521597.354138,
+    "seen": 1793111542.1410487,
+    "ast_hash": "2f9d59465e5b856956be618ec15d7d88",
+    "semantic_hash": "2f9d59465e5b856956be618ec15d7d88"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/13-mmck-c-maior-que-1.png": {
+    "mtime": 1792521597.382931,
+    "seen": 1793111542.14105,
+    "ast_hash": "148863c525d4b5b499706de2584f5f07",
+    "semantic_hash": "148863c525d4b5b499706de2584f5f07"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/14-formula-pesos-mmck.png": {
+    "mtime": 1792521597.3905356,
+    "seen": 1793111542.1410513,
+    "ast_hash": "716e8c6421d39a149f56c0205ccbbfc0",
+    "semantic_hash": "716e8c6421d39a149f56c0205ccbbfc0"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/15-exemplo-mm14-1.png": {
+    "mtime": 1792521597.4186068,
+    "seen": 1793111542.1410527,
+    "ast_hash": "f0e7ea1529e52f539dce6cacabbfb183",
+    "semantic_hash": "f0e7ea1529e52f539dce6cacabbfb183"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/15-exemplo-mm14-2.png": {
+    "mtime": 1792521597.4342782,
+    "seen": 1793111542.141054,
+    "ast_hash": "09797456ebc1dbe3c534b4fc9c71528d",
+    "semantic_hash": "09797456ebc1dbe3c534b4fc9c71528d"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/16-exemplo-mm24-1.png": {
+    "mtime": 1792521597.4689693,
+    "seen": 1793111542.1410553,
+    "ast_hash": "f210004f37c57421b41f72a75c7cb5dc",
+    "semantic_hash": "f210004f37c57421b41f72a75c7cb5dc"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M10 - Processo de Nascimento e Morte/imagens/16-exemplo-mm24-2.png": {
+    "mtime": 1792521597.4978042,
+    "seen": 1793111542.1410565,
+    "ast_hash": "3ec3834f96b4ac9575849c69fa0cb2cb",
+    "semantic_hash": "3ec3834f96b4ac9575849c69fa0cb2cb"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/01-indices-desempenho-conceitos.png": {
+    "mtime": 1792521597.5297754,
+    "seen": 1793111542.1410577,
+    "ast_hash": "008bc7ecfec4efceb3771800fb3484e7",
+    "semantic_hash": "008bc7ecfec4efceb3771800fb3484e7"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/02-exemplo-1.png": {
+    "mtime": 1792521597.5984488,
+    "seen": 1793111542.1410592,
+    "ast_hash": "bec2bece3b0a00a3e1d7d59d4f51acde",
+    "semantic_hash": "bec2bece3b0a00a3e1d7d59d4f51acde"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/02-exemplo-2.png": {
+    "mtime": 1792521597.6357846,
+    "seen": 1793111542.1410606,
+    "ast_hash": "6bf539f30a6436500ad48f3f287355a8",
+    "semantic_hash": "6bf539f30a6436500ad48f3f287355a8"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/02-exemplo-3.png": {
+    "mtime": 1792521597.686377,
+    "seen": 1793111542.1410615,
+    "ast_hash": "7d45479909f14f2a70c3f8db9842ed60",
+    "semantic_hash": "7d45479909f14f2a70c3f8db9842ed60"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/02-exemplo-4.png": {
+    "mtime": 1792521597.7297218,
+    "seen": 1793111542.141063,
+    "ast_hash": "d35d52752c49ff9fd7b6348862c038c4",
+    "semantic_hash": "d35d52752c49ff9fd7b6348862c038c4"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/03-perda-clientes.png": {
+    "mtime": 1792521597.7353315,
+    "seen": 1793111542.1410642,
+    "ast_hash": "4a382716017204044d0c445bcce4494c",
+    "semantic_hash": "4a382716017204044d0c445bcce4494c"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/04-formulas-indices.png": {
+    "mtime": 1792521597.7664387,
+    "seen": 1793111542.1410654,
+    "ast_hash": "6d79f16180ec01e0f6e36d1133cc986e",
+    "semantic_hash": "6d79f16180ec01e0f6e36d1133cc986e"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/05-populacao-media.png": {
+    "mtime": 1792521597.7822986,
+    "seen": 1793111542.1410668,
+    "ast_hash": "f0cd1d386fd83905dd76688911c71404",
+    "semantic_hash": "f0cd1d386fd83905dd76688911c71404"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/06-vazao.png": {
+    "mtime": 1792521597.793286,
+    "seen": 1793111542.141068,
+    "ast_hash": "54e24f0969d21dace18e646ba0589d4b",
+    "semantic_hash": "54e24f0969d21dace18e646ba0589d4b"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/07-utilizacao.png": {
+    "mtime": 1792521597.803311,
+    "seen": 1793111542.1410694,
+    "ast_hash": "1ca540d93886615a27b56120e3d5194b",
+    "semantic_hash": "1ca540d93886615a27b56120e3d5194b"
+  },
+  "E2 - Avalia\u00e7\u00e3o de Aprendizagem/M11 - C\u00e1lculo dos \u00cdndices de Desempenho/imagens/08-tempo-resposta.png": {
+    "mtime": 1792521597.803311,
+    "seen": 1793111542.1410704,
+    "ast_hash": "4e344cba4722cf5963bed2021ab03e31",
+    "semantic_hash": "4e344cba4722cf5963bed2021ab03e31"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/graficos/prob_estados_atual_Q1.png": {
+    "mtime": 1791394244.1250608,
+    "seen": 1793111542.1410718,
+    "ast_hash": "25c98977d41498ceda7b2b206bb4f995",
+    "semantic_hash": "25c98977d41498ceda7b2b206bb4f995"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/graficos/prob_estados_atual_Q2.png": {
+    "mtime": 1791394244.2995965,
+    "seen": 1793111542.1410732,
+    "ast_hash": "68e07ff6ccfb9675792f3ba176d6fc7f",
+    "semantic_hash": "68e07ff6ccfb9675792f3ba176d6fc7f"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/graficos/prob_estados_atual_Q3.png": {
+    "mtime": 1791394244.4771318,
+    "seen": 1793111542.1410744,
+    "ast_hash": "01df8ca7b8656a899665cf31c6d3a753",
+    "semantic_hash": "01df8ca7b8656a899665cf31c6d3a753"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/graficos/prob_estados_comparacao_Q1.png": {
+    "mtime": 1791394244.2197995,
+    "seen": 1793111542.1410756,
+    "ast_hash": "3489ed295e6608c4974330a4f0ca4089",
+    "semantic_hash": "3489ed295e6608c4974330a4f0ca4089"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/graficos/prob_estados_comparacao_Q2.png": {
+    "mtime": 1791394244.3931367,
+    "seen": 1793111542.1410768,
+    "ast_hash": "de16bad7c60cea85f390d1abfe871834",
+    "semantic_hash": "de16bad7c60cea85f390d1abfe871834"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/graficos/prob_estados_comparacao_Q3.png": {
+    "mtime": 1791394244.5604162,
+    "seen": 1793111542.141078,
+    "ast_hash": "53772650ac3c8a6352ca0a2c590c421e",
+    "semantic_hash": "53772650ac3c8a6352ca0a2c590c421e"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/rede_atual.svg": {
+    "mtime": 1791388408.1886687,
+    "seen": 1793111542.1410792,
+    "ast_hash": "bf050488920150fabc0c3f48ffb92a22",
+    "semantic_hash": "bf050488920150fabc0c3f48ffb92a22"
+  },
+  "T2 - An\u00e1lise por Simula\u00e7\u00e3o de um Help Desk de TI/rede_melhorada.svg": {
+    "mtime": 1791388408.1906683,
+    "seen": 1793111542.1410806,
+    "ast_hash": "7415a8daa51a7572bca2be648ea7d736",
+    "semantic_hash": "7415a8daa51a7572bca2be648ea7d736"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/E3-andamento.md": {
+    "mtime": 1793193994.95293,
+    "seen": 1793703711.7015014,
+    "ast_hash": "cd1f0f605914b28bd4d0473ed9af7260",
+    "semantic_hash": "cd1f0f605914b28bd4d0473ed9af7260"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/LEIA-ME.md": {
+    "mtime": 1793193994.8501272,
+    "seen": 1793703711.701503,
+    "ast_hash": "82dbbf0bfddbe291050437621cc334f2",
+    "semantic_hash": "82dbbf0bfddbe291050437621cc334f2"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/M12-texto.md": {
+    "mtime": 1793113871.4689786,
+    "seen": 1793703711.7015042,
+    "ast_hash": "de7f8dbc9a767da5342b22e34bf22920",
+    "semantic_hash": "de7f8dbc9a767da5342b22e34bf22920"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/E3.pdf": {
+    "mtime": 1793193855.3721094,
+    "seen": 1793703711.7015066,
+    "ast_hash": "c41ba54cbe51934abba6606886f3efdc",
+    "semantic_hash": "c41ba54cbe51934abba6606886f3efdc"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/01-conceito-cadeia-markov.jpg": {
+    "mtime": 1793113820.2289572,
+    "seen": 1793703711.7015076,
+    "ast_hash": "e3ebdad2cfad1a1c11328008f146d8cf",
+    "semantic_hash": "e3ebdad2cfad1a1c11328008f146d8cf"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/02-usos.jpg": {
+    "mtime": 1793113820.2910802,
+    "seen": 1793703711.7015092,
+    "ast_hash": "012154f70f0554d90d99ecd84bf37597",
+    "semantic_hash": "012154f70f0554d90d99ecd84bf37597"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/03-laboratorio-mm33.jpg": {
+    "mtime": 1793113820.344464,
+    "seen": 1793703711.7015102,
+    "ast_hash": "bc04b2db2e4c8d100fa665870646790b",
+    "semantic_hash": "bc04b2db2e4c8d100fa665870646790b"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/04-laboratorio-falta-de-luz.jpg": {
+    "mtime": 1793113820.4104455,
+    "seen": 1793703711.7015114,
+    "ast_hash": "9a512f0aeb8be93f39642f60b586ae5a",
+    "semantic_hash": "9a512f0aeb8be93f39642f60b586ae5a"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/05-escalas-de-tempo.jpg": {
+    "mtime": 1793113820.4663851,
+    "seen": 1793703711.7015123,
+    "ast_hash": "f95f990f2a8ed0830bd96db9026495c7",
+    "semantic_hash": "f95f990f2a8ed0830bd96db9026495c7"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/06-equacao-piQ.jpg": {
+    "mtime": 1793113820.5130935,
+    "seen": 1793703711.7015138,
+    "ast_hash": "859b585e703b73d8033e6ecba6362e4a",
+    "semantic_hash": "859b585e703b73d8033e6ecba6362e4a"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/07-matriz-transicao.jpg": {
+    "mtime": 1793113820.5490615,
+    "seen": 1793703711.701515,
+    "ast_hash": "8086087fb63df57ed2ad710f28521f8d",
+    "semantic_hash": "8086087fb63df57ed2ad710f28521f8d"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/08-gerador-infinitesimal-simbolico.jpg": {
+    "mtime": 1793113820.5854263,
+    "seen": 1793703711.7015183,
+    "ast_hash": "fcaaea63236dace5b08cfbb6b49b1170",
+    "semantic_hash": "fcaaea63236dace5b08cfbb6b49b1170"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/09-gerador-infinitesimal-numerico.jpg": {
+    "mtime": 1793113820.6239414,
+    "seen": 1793703711.7015197,
+    "ast_hash": "ea1981b4824695d935f2040ad11a8503",
+    "semantic_hash": "ea1981b4824695d935f2040ad11a8503"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/10-vetor-vezes-Q.jpg": {
+    "mtime": 1793113820.6598196,
+    "seen": 1793703711.701521,
+    "ast_hash": "8acb38efa5fe64daff9e4990d45288dc",
+    "semantic_hash": "8acb38efa5fe64daff9e4990d45288dc"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/11-sistema-equacoes.jpg": {
+    "mtime": 1793113820.697556,
+    "seen": 1793703711.7015219,
+    "ast_hash": "fc43045e3f3a7c1971320fc0eabc45af",
+    "semantic_hash": "fc43045e3f3a7c1971320fc0eabc45af"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/12-resolucao-sistema.jpg": {
+    "mtime": 1793113820.732483,
+    "seen": 1793703711.7015228,
+    "ast_hash": "5c4677adb37232cc073770ed1a8aa5ca",
+    "semantic_hash": "5c4677adb37232cc073770ed1a8aa5ca"
+  },
+  "E3 - Avalia\u00e7\u00e3o de Aprendizagem/M12 - Cadeias de Markov/imagens/13-normalizacao.jpg": {
+    "mtime": 1793113820.7664201,
+    "seen": 1793703711.7015243,
+    "ast_hash": "398df4e6f10f1c4e91637955822d9419",
+    "semantic_hash": "398df4e6f10f1c4e91637955822d9419"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/E4-andamento.md": {
+    "mtime": 1793807021.673465,
+    "seen": 1794396717.4220297,
+    "ast_hash": "c1023ac959b93a4d978ba669daea02d0",
+    "semantic_hash": "c1023ac959b93a4d978ba669daea02d0"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/LEIA-ME.md": {
+    "mtime": 1793790790.3065157,
+    "seen": 1794396717.4220319,
+    "ast_hash": "b635f22bb6dedca03e2b378c116ad11d",
+    "semantic_hash": "b635f22bb6dedca03e2b378c116ad11d"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/M13-texto.md": {
+    "mtime": 1793790790.2554436,
+    "seen": 1794396717.4220333,
+    "ast_hash": "a7699346e602947578c3ace90074324a",
+    "semantic_hash": "a7699346e602947578c3ace90074324a"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/E5-andamento.md": {
+    "mtime": 1794332719.854034,
+    "seen": 1794396717.4220345,
+    "ast_hash": "891d2dea17e55a335716d00d3ca01e88",
+    "semantic_hash": "891d2dea17e55a335716d00d3ca01e88"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/LEIA-ME.md": {
+    "mtime": 1794321261.1061995,
+    "seen": 1794396717.4220357,
+    "ast_hash": "d2ae0b00d616c456308fba50568c856b",
+    "semantic_hash": "d2ae0b00d616c456308fba50568c856b"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/M14-texto.md": {
+    "mtime": 1794321237.1870008,
+    "seen": 1794396717.4220366,
+    "ast_hash": "6a9f10db7ef5f5615e51e427783349ee",
+    "semantic_hash": "6a9f10db7ef5f5615e51e427783349ee"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/E4.pdf": {
+    "mtime": 1793807584.0274324,
+    "seen": 1794396717.4220393,
+    "ast_hash": "59d2c39f11bc3869563c34261becb8b0",
+    "semantic_hash": "59d2c39f11bc3869563c34261becb8b0"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/E5.pdf": {
+    "mtime": 1794332630.6878872,
+    "seen": 1794396717.4220405,
+    "ast_hash": "11795fa0d0af30d96cdc0df2df59b212",
+    "semantic_hash": "11795fa0d0af30d96cdc0df2df59b212"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/00-rede-sorteada-situacao-3.jpg": {
+    "mtime": 1793790766.043288,
+    "seen": 1794396717.4220417,
+    "ast_hash": "2a4a245e0221dec435892e5c16cea967",
+    "semantic_hash": "2a4a245e0221dec435892e5c16cea967"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/01-tipos-de-fila.jpg": {
+    "mtime": 1793790766.0790858,
+    "seen": 1794396717.4220428,
+    "ast_hash": "39e296563d9719e5ae12142caace0b4a",
+    "semantic_hash": "39e296563d9719e5ae12142caace0b4a"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/02-notacao-kendall.jpg": {
+    "mtime": 1793790766.1102252,
+    "seen": 1794396717.4220443,
+    "ast_hash": "62366202a817da238ef9d3869fa52f31",
+    "semantic_hash": "62366202a817da238ef9d3869fa52f31"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/03-indices-de-desempenho.jpg": {
+    "mtime": 1793790766.1382377,
+    "seen": 1794396717.4220452,
+    "ast_hash": "a4c53e6d44b5e1eaf5d0cbc5af9e5750",
+    "semantic_hash": "a4c53e6d44b5e1eaf5d0cbc5af9e5750"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/04-exemplo-fila-auxiliar.jpg": {
+    "mtime": 1793790766.1649008,
+    "seen": 1794396717.4220464,
+    "ast_hash": "bbad34e00e3959af505944bc8b2c5266",
+    "semantic_hash": "bbad34e00e3959af505944bc8b2c5266"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/05-exemplo-taxas-de-visita.jpg": {
+    "mtime": 1793790766.1909032,
+    "seen": 1794396717.4220474,
+    "ast_hash": "b4b10b7a241c4800ea913cc0e62e59ea",
+    "semantic_hash": "b4b10b7a241c4800ea913cc0e62e59ea"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/06-vazao.jpg": {
+    "mtime": 1793790766.2188983,
+    "seen": 1794396717.422049,
+    "ast_hash": "7fa46bb633951fdec4dcf658bf07f08a",
+    "semantic_hash": "7fa46bb633951fdec4dcf658bf07f08a"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/07-utilizacao.jpg": {
+    "mtime": 1793790766.245459,
+    "seen": 1794396717.4220502,
+    "ast_hash": "cb4bd49f37ceee6e1005ea51a74f8592",
+    "semantic_hash": "cb4bd49f37ceee6e1005ea51a74f8592"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/08-tempo-de-resposta.jpg": {
+    "mtime": 1793790766.274276,
+    "seen": 1794396717.4220514,
+    "ast_hash": "2b4ef59d6d0ddafb50b6094214f298de",
+    "semantic_hash": "2b4ef59d6d0ddafb50b6094214f298de"
+  },
+  "E4 - Avalia\u00e7\u00e3o de Aprendizagem/M13 - Redes Abertas de Filas/imagens/09-resumo-formulas.jpg": {
+    "mtime": 1793790766.3023014,
+    "seen": 1794396717.4220524,
+    "ast_hash": "cad4df8d80bbbe3e826c3aa2e6f8a8e8",
+    "semantic_hash": "cad4df8d80bbbe3e826c3aa2e6f8a8e8"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/00-rede-sorteada-situacao-3.jpg": {
+    "mtime": 1794321216.638995,
+    "seen": 1794396717.4220533,
+    "ast_hash": "c52bf35066390aa9939a765f02afcee3",
+    "semantic_hash": "c52bf35066390aa9939a765f02afcee3"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/01-rede-exemplo-taxas-de-visita.jpg": {
+    "mtime": 1794321216.7117684,
+    "seen": 1794396717.4220548,
+    "ast_hash": "8306c381195b5570a5f47bb04edb1f1b",
+    "semantic_hash": "8306c381195b5570a5f47bb04edb1f1b"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/02-equacoes-taxas-de-visita.jpg": {
+    "mtime": 1794321216.768215,
+    "seen": 1794396717.422056,
+    "ast_hash": "461565474c5d7354541126960a2286ae",
+    "semantic_hash": "461565474c5d7354541126960a2286ae"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/03-assumir-v1-igual-1.jpg": {
+    "mtime": 1794321216.815135,
+    "seen": 1794396717.422057,
+    "ast_hash": "b7d61d4fdf97d05bcf3ef775d2b53a99",
+    "semantic_hash": "b7d61d4fdf97d05bcf3ef775d2b53a99"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/04-exemplo-mva-enunciado.jpg": {
+    "mtime": 1794321217.1596644,
+    "seen": 1794396717.4220579,
+    "ast_hash": "5f8a4997e87bf0960995926ad0026852",
+    "semantic_hash": "5f8a4997e87bf0960995926ad0026852"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/05-exemplo-mva-visitas-e-n0.jpg": {
+    "mtime": 1794321217.2603478,
+    "seen": 1794396717.4220593,
+    "ast_hash": "2cdffe95dae0c128f2c67e4b2a1bc0e3",
+    "semantic_hash": "2cdffe95dae0c128f2c67e4b2a1bc0e3"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/06-exemplo-mva-n1.jpg": {
+    "mtime": 1794321217.3061712,
+    "seen": 1794396717.4220603,
+    "ast_hash": "51339d6efb1b0c78cb081fa67b053714",
+    "semantic_hash": "51339d6efb1b0c78cb081fa67b053714"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/07-exemplo-mva-conferencia.jpg": {
+    "mtime": 1794321217.343789,
+    "seen": 1794396717.4220612,
+    "ast_hash": "edbb7e5f62c95fed56b171c2b708c8f6",
+    "semantic_hash": "edbb7e5f62c95fed56b171c2b708c8f6"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/08-exemplo-mva-n2.jpg": {
+    "mtime": 1794321217.3833587,
+    "seen": 1794396717.4220626,
+    "ast_hash": "bbcde458f476dec1c2a97c3c04b705e1",
+    "semantic_hash": "bbcde458f476dec1c2a97c3c04b705e1"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/09-exemplo-mva-n3.jpg": {
+    "mtime": 1794321217.434033,
+    "seen": 1794396717.4220638,
+    "ast_hash": "1b1db81240d8819b167d726c535f94ec",
+    "semantic_hash": "1b1db81240d8819b167d726c535f94ec"
+  },
+  "E5 - Avalia\u00e7\u00e3o de Aprendizagem/M14 - Redes Fechadas de Filas/imagens/10-formula-vazao-d0.jpg": {
+    "mtime": 1794321217.491701,
+    "seen": 1794396717.4220648,
+    "ast_hash": "2d47bdb47566b576d660316dc57bd56e",
+    "semantic_hash": "2d47bdb47566b576d660316dc57bd56e"
+  }
+}
