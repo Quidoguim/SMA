@@ -14,6 +14,7 @@ Cada entrega tem sua própria pasta, nomeada com o código do módulo (M) ou da 
 - [E3 - Avaliação de Aprendizagem](<E3 - Avaliação de Aprendizagem>): material de apoio do módulo M12 (Cadeias de Markov em tempo contínuo: matriz de transição, gerador infinitesimal, montagem e resolução do sistema πQ = 0 e normalização), com texto, fórmulas transcritas e imagens, e a resolução da questão da E3 (cadeia de Markov da biruta de sinalização) entregue em PDF.
 - [E4 - Avaliação de Aprendizagem](<E4 - Avaliação de Aprendizagem>): material de apoio do módulo M13 (redes abertas de filas: fila auxiliar, taxas de visita, vazão, utilização, tempo de resposta e população), com texto, fórmulas transcritas e imagens, e a resolução da questão da E4 (rede aberta com quatro filas) entregue em PDF.
 - [E5 - Avaliação de Aprendizagem](<E5 - Avaliação de Aprendizagem>): material de apoio do módulo M14 (redes fechadas de filas: taxas de visita e Mean-Value Analysis), com texto, fórmulas transcritas e imagens, e a resolução da questão da E5 (rede fechada com quatro filas, de 19 para 20 clientes) entregue em PDF.
+- [E7 - Avaliação de Aprendizagem](<E7 - Avaliação de Aprendizagem>): módulo M16 (Redes de Petri Estocásticas: lugares, transições, marcações e conjunto de atingibilidade), com o resumo do método e a resolução da questão da E7 (conjunto de atingibilidade de uma SPN com seis lugares, 15 marcações) entregue em PDF.
 
 ## Integrantes
 
